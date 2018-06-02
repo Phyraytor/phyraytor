@@ -1,0 +1,238 @@
+  
+  // Это вся обложка тетради 
+
+  .death0{fill:#5D2C0C;} // Рамка
+  .death1{fill:#843C0C;} // Внутрення рамка
+  .death2{fill:#7B380C;} // Под внутренней рамкой полоса
+  .death3{fill:#6D330C;} // Посола ещё ниже
+  .death4{fill:#FFFFFF;} // Дырки
+  .death5{fill:#843C0C;} // Описание
+  .death6{fill:#A06640;} // Строки в описании
+  // Конец обложки
+
+  .death7{fill:#808000;} // Верхняя закладка
+  .death8{fill:#008000;}
+  .death9{fill:#800000;}
+  .death10{fill:#800080;}
+  .death11{fill:#DDDDDD;}
+  .death12{fill:#DBC280;}
+  .death13{fill:#080507;}
+  .death14{stroke:#FFFFFF;stroke-width:0.75;stroke-miterlimit:10;}
+  .death15{fill:#DDB671;}
+  .death16{fill:#C98F22;}
+  .death17{fill:#805914;}
+  .death18{fill:#9D0E0D;}
+  .death19{fill:#F01C1C;}
+  .death20{fill:#D32020;}
+  .death21{fill:#B4B2B2;}
+  .death22{fill:#C0BEBD;}
+
+
+@TZanimateTime: 1s;
+
+.message
+{
+  background-color: white;
+  flex-direction: row;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  padding: 7% 0;
+  @media only screen and (max-width: 450px)
+  {
+      flex-direction:  column-reverse;
+      align-items: flex-start;
+  }
+  & .TZ
+  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    //transform: scaleY(0);
+    background: linear-gradient(to top, @GreyColor + @Gradient,  @GreyColor - @Gradient);
+    box-shadow: 0px 0px 50px 1px grey;
+    border-radius: 1%;
+    width: 53%;
+
+    @media only screen and (max-width: 900px)
+    {
+      width: 60%;
+    }
+    @media only screen and (max-width: 600px)
+    {
+      flex-direction:  column;
+      width: 50%;
+    }
+    @media only screen and (max-width: 450px)
+    {
+      flex-direction:  row;
+      width: 96%;
+      margin: 0 2%;
+    }
+     @media only screen and (max-width: 378px)
+    {
+      flex-direction:  column;
+    }
+
+    & #imgTZ
+    {
+      width: 75%;
+      height: auto;
+      
+      & a
+      {
+        padding: 0;
+        height: auto;
+      }
+      & .IconTZ
+      {
+
+         flex-shrink: 0;
+      }
+
+    }
+
+    
+    & #contentTZ
+    {
+      color: white;
+      
+      flex-shrink: 2;
+      padding: 0 2%;
+      text-align: left;
+      @media only screen and (max-width: 600px)
+      {
+        text-align: center;
+      }
+      @media only screen and (max-width: 450px)
+      {
+        text-align: left;
+      }
+      @media only screen and (max-width: 378px)
+      {
+        text-align: center;
+      }
+    }
+
+    & h3, p
+    {
+      margin: 0% 0 0;
+      font-size: 1.6em;
+      margin-left: 2%; 
+
+      @media only screen and (max-width: 1000px)
+      {
+        font-size: 1.1em;
+      }
+    }
+
+    & p
+    { 
+      font-size: 1.17em;
+
+      @media only screen and (max-width: 1000px)
+      {
+        font-size: 1em;
+      }
+
+    }
+
+    span
+    {
+      text-align: center;
+      margin-left: 2%;
+    }
+  }
+
+
+  & .application
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    background: linear-gradient(to top, @HeaderColor + @Gradient - #030303,  @HeaderColor - @Gradient);
+    box-shadow: 0px 0px 50px 1px grey;
+    border-radius: 5%;
+   // transform: scaleX(0);
+    width: 27%;
+    @media only screen and (max-width: 600px)
+    {
+      width: 46%;
+    }
+    @media only screen and (max-width: 450px)
+    {
+      width: 96%;
+      margin: 0 2% 5%;
+    }
+    & p
+    { 
+      font-size: 1.6em;
+
+      text-align: center;
+      color: white;
+      margin: 5% 0 0;
+    }
+    & input[type=text], input[type=email], input[type=submit]
+    {
+      
+      width: 75%;
+      margin: 5% 0 5% 10%; 
+      padding: 3%;
+      font-size: 1em;
+      border-radius: 3%;
+    }
+    & input[type=submit]
+    {
+      width: 84%;
+      padding: 4% 16%;
+    }
+  }
+  @media only screen and (max-width: 1150px)
+  {
+    & .application
+    {
+      
+    }
+  }
+}
+
+.TZAnimate
+{
+    animation-name: TZAnimate;
+    animation-duration: @TZanimateTime;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+.TZapplicationAnimate
+{
+  animation-name:  appclicationTZAnimate;
+  animation-duration: @TZanimateTime;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+@keyframes TZAnimate
+{
+    0% 
+    {
+      transform: scaleY(0);
+    }
+    100% 
+    {
+      transform: scaleY(1);
+    }
+}
+
+@keyframes appclicationTZAnimate
+{
+    0% 
+    {
+      transform: scaleX(0);
+    }
+    100% 
+    {
+      transform: scaleX(1);
+    }
+}

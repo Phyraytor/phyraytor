@@ -1,0 +1,19 @@
+.message.Block
+	
+	.TZ
+		#contentTZ
+			h3 Техническое задание
+			p В данном файле содержится шаблон, по которому мне будет максимально удобно понять, какую работу нужно выполнить и оценить её стоимость.
+			span (Нажмите на книжку)
+		#imgTZ 
+			a(href = 'https://drive.google.com/open?id=13uaxSFvSN3LD-onwdSJbCa0IlzDYBU8F' target="_blank")
+				.IconTZ(onMouseOver = 'DeathHover()' onMouseOut= 'DeathMouseOut()')
+					include svg/deatx.svg
+	.application
+		p Сообщение
+		from(method = 'post' action = 'Post.php'  )
+			input(type = 'text' placeholder = 'Имя'  name = 'UserName')
+			input(type = 'email' placeholder = 'Email'  name = 'UserMail') 
+			input(type = 'submit' value = 'Отправить' name = 'post') 
+			
+			

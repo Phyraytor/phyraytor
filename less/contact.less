@@ -1,0 +1,90 @@
+@k: #212121;
+
+
+.vk0:hover
+{
+	fill:#3E6189 - @k;
+}
+.vk0{fill:#3E6189;}
+.vk1{fill:#FEFEFE;}
+.vk2{fill:#3E6289;}
+.vk3{fill:#FDFDFD;}
+
+.facebook0{fill:#434B99;}
+
+.facebook0:hover
+{
+	fill:#434B99 - @k;
+}
+.facebook1{fill:#FEFEFE;}
+
+.Telegram0:hover
+{
+	fill:#2097D4 - @k;
+}
+
+.Telegram0{fill:#2097D4;}
+.Telegram1{fill:#FEFEFE;}
+.Telegram2{fill:#0E72CC;}
+.Telegram3{fill:#0063CE;}
+
+.mail0:hover
+{
+	fill:#677CC6 - @k;
+}
+.mail0{fill:#677CC6;}
+.mail1{fill:#FEFEFE;}
+
+.portfolio0:hover
+{
+	fill:#308BCE - @k;
+}
+.portfolio0{fill:#308BCE;}
+.portfolio1{fill:#FEFEFE;}
+.portfolio2{fill:#81E2FE;}
+
+
+footer
+{
+  background: linear-gradient(to top, @HeaderColor + @Gradient,  @HeaderColor - @Gradient);
+
+  padding: 0% 0 1%;
+  
+  & h3
+  {
+    color: white;
+    text-align: center;
+    font-size: 3.2em;
+    margin: 2% 0 3%;
+
+    @media only screen and (max-width: 400px)
+    {
+      font-size: 2em;
+    }
+    @media only screen and (max-width: 240px)
+    {
+      font-size: 1.5em;
+    }
+  }  
+
+  & a 
+  {
+    width: 12%;
+    
+    @media only screen and (max-width: 400px)
+    {
+      width: 65%;
+    }
+  }
+  .contact
+  {
+  	display: flex;
+  	justify-content: space-around;
+  	align-items: center;
+    @media only screen and (max-width: 400px)
+    {
+      flex-direction: column;
+    }
+  }
+
+}

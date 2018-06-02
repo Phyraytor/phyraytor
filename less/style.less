@@ -1,0 +1,104 @@
+body, html
+{
+  overflow-x: hidden;
+  margin: 0;
+}
+
+svg
+{
+  margin: 0;
+  padding: 0;
+}
+
+img
+{
+  max-width: 100%;
+  height: auto;
+}
+
+h1,h2,h3,h4,h5,h6,p
+{
+  font-family: 'Clear Sans';
+  font-style: normal;
+}
+
+span
+{
+  font-family: 'Clear Sans';
+  font-style: italic; 
+}
+
+p
+{
+  font-weight: 300;
+}
+
+
+h4,h5,h6,span
+{
+  font-weight: 400;
+}
+
+
+h1,h2,h3
+{
+  font-weight: 500;
+}
+
+
+.Block
+{
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+}
+
+
+
+
+input[type = submit] {
+  text-align: center;
+  
+  display: inline-block;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 -1px rgba(0,0,0,.5);
+  user-select: none;
+  padding: .7em 1.5em;
+  border: 1px solid #350000;
+  border-radius: 5px;
+  outline: none;
+  background: #7E0000 linear-gradient(#600000, #900000 80%);
+  box-shadow:
+   0 6px #500000,
+   0 3px 15px rgba(0,0,0,.4),
+   inset 0 1px rgba(255,255,255,.3),
+   inset 0 0 3px rgba(255,255,255,.5);
+  transition: .1s;
+} 
+input[type = submit]:hover {
+  background: #900000 linear-gradient(#800000, #A00000 80%);
+}
+input[type = submit]:active {
+  background: #700000 linear-gradient(#5E0000 20%, #850000);
+  box-shadow:
+   0 2px #250000,
+   0 1px 6px rgba(0,0,0,.4),
+   inset 0 1px rgba(255,255,255,.3),
+   inset 0 0 3px rgba(255,255,255,.5);
+  -webkit-transform: translate(0, 4px);
+  transform: translate(0, 4px);
+}
+
+@Gradient: #111111;
+@HeaderColor: #111111; 
+@GreyColor: #212121;
+
+@import "cap.less";
+@import "main.less";
+@import "skills.less";
+@import "bonus.less";
+@import "example.less";
+@import "message.less"; 
+@import "contact.less"; 

@@ -1,0 +1,349 @@
+@Andle: 17deg;
+@blockAnimationBonus: 1s;
+.bonus
+{
+  background-color: white;
+  padding: 0 0 7%;
+  @media only screen and (max-width: 900px)
+  {
+   
+      // padding: 0 0 30%;
+  }
+  & h3
+  {
+    text-align: center;
+    margin: 3% 0 ;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 70px black;
+    @media only screen and (max-width: 950px)
+    {
+      font-size: 2em;
+    }
+    @media only screen and (max-width: 712px)
+    {
+      font-size: 1.5em;
+    }
+    @media only screen and (max-width: 450px)
+    {
+        font-size: 1.2em;
+        margin: 10% 0;
+    }
+  }
+
+  
+  & .stack 
+  {
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+  	margin: 10% 0;
+  	width: 100%;
+   @media only screen and (max-width: 900px)
+    {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .leftBonus, .reightBonus
+    {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+      margin-top: 4%;
+      width: 40%;
+      @media only screen and (max-width: 900px)
+      {
+        width: 90%;
+      }
+      
+    }
+    
+
+    .reightBonus
+    {
+      @media only screen and (max-width: 900px)
+      {
+
+        margin-top: 14%;
+      }
+    }
+   
+
+    & .OneBonus, .ThreeBonus, .TwoBonus, .FourBonus
+    {
+      background: linear-gradient(to top, @HeaderColor + @Gradient,  @HeaderColor - @Gradient);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-end;
+      border-radius: 50px;
+
+      padding: 0;
+      height: 26%;
+      width: 100%;
+         @media only screen and (max-width: 450px)
+        {
+          flex-direction: column;
+        }
+  
+       .contentSkill
+        {
+            background: linear-gradient(to top, @HeaderColor + @Gradient,  @HeaderColor - @Gradient);
+            align-self: flex-end;
+            border-radius:  130px;
+            max-width: 260px;
+            flex-basis: 300px;
+            flex-shrink: 0;
+            padding: 50px 0;
+            margin: 0 1%;
+
+      
+            @media only screen and (max-width: 1250px)
+            {
+              flex-basis: 235px;
+            }
+            @media only screen and (max-width: 1070px)
+            {
+              flex-basis: 200px;       
+            }
+        }
+
+        & .IconBonus
+        {
+          flex-basis: 185px;
+          padding: 0;
+          flex-shrink: 0;
+          align-self: flex-start;
+          @media only screen and (max-width: 1070px)
+          {
+              flex-basis: 145px;
+              margin-top: 1%;
+          }
+
+        }
+        @media only screen and (max-width: 900px)
+        {
+          
+          flex-basis: 125px;
+          justify-content: space-between;
+        }
+
+
+    }
+  
+    
+
+    & .TwoBonus, .FourBonus
+    {
+      flex-direction: row-reverse;
+      @media only screen and (max-width: 280px)
+      {
+        flex-direction: column;
+      }
+
+    }
+
+    
+    & h4, p
+    {
+      color: white;
+      margin: 2%;
+      font-size: 1.3em;
+      text-align: center;
+      @media only screen and (max-width: 1250px)
+      {
+        font-size: 1.1em;
+      }
+      
+      @media only screen and (max-width: 1070px)
+      {
+        font-size: 0.95em;
+      }
+    }
+  }
+   
+  .leftBonus
+  {
+    margin-left: 8%;
+    @media only screen and (max-width: 900px)
+    {
+      margin-left: 0;
+    }
+  }
+  .reightBonus
+  {
+    margin-left: 7%;
+    @media only screen and (max-width: 900px)
+    {
+      margin-left: 0;
+    }
+  }
+ .OneBonus, .ThreeBonus
+  {      
+   
+    transform:  rotate(-@Andle);
+    @media only screen and (max-width: 900px)
+    {
+      transform:  rotate(-4deg); 
+    }
+    .contentSkill
+    {
+        transform: rotate(@Andle) translate(35%, 15%);
+        @media only screen and (max-width: 900px)
+        {
+          transform: rotate(4deg) translate(7%, 25%);
+        }
+
+    }
+    .IconBonus
+    {
+      margin-left: -10%;
+
+        @media only screen and (max-width: 1070px)
+        {
+           margin-left: -8%;
+        }
+        @media only screen and (max-width: 900px)
+        {
+           margin-left: 0%;
+
+        }
+    }
+  }
+
+
+  .TwoBonus, .FourBonus
+  {
+    transform:  rotate(-@Andle);
+    @media only screen and (max-width: 900px)
+    {
+      transform:  rotate(4deg); 
+    }
+    
+    .contentSkill
+    {
+        transform: rotate(@Andle) translate(0, 25%);
+
+        @media only screen and (max-width: 900px)
+        {
+          transform: rotate(-4deg) translate(-7%, 25%);
+        }
+    
+    }
+    .IconBonus
+    {
+        margin-right: -10%;
+        @media only screen and (max-width: 1070px)
+        {
+           margin-right:  -8%;
+        }
+        @media only screen and (max-width: 900px)
+        {
+          margin-right: 0;
+        }
+    }
+  }
+
+     
+}
+
+.TwoBonus, .FourBonus
+{
+    @media only screen and (max-width: 900px)
+    {
+      margin-top: 15%;
+    }
+    
+}
+
+
+.OneBonusAnimate
+{   
+      animation-name:   bonusAnimatePlus;
+      animation-duration: @blockAnimationBonus;
+      animation-delay: @blockAnimationBonus * 3 - @blockAnimationBonus / 2;
+      animation-fill-mode: both;
+      @media screen and (max-width: 620px)
+      {
+         animation-delay: @blockAnimationBonus / 2;
+      }
+}
+
+   .ThreeBonusAnimate
+   {
+      animation-name:  bonusAnimatePlus;
+      animation-duration: @blockAnimationBonus;
+      animation-delay: @blockAnimationBonus / 2;
+      animation-fill-mode: both;
+      @media screen and (max-width: 620px)
+      {
+         animation-delay: @blockAnimationBonus * 3 - @blockAnimationBonus / 2;
+      }
+   }
+
+   .TwoBonusAnimate
+   {
+      animation-name: bonusAnimatePlus;
+      animation-duration: @blockAnimationBonus;
+      animation-delay: @blockAnimationBonus * 4 - @blockAnimationBonus / 2;
+      animation-fill-mode: both;
+      @media screen and (max-width: 620px)
+      {
+         animation-delay: @blockAnimationBonus * 2 - @blockAnimationBonus / 2;
+      }
+   }
+
+   .FourBonusAnimate
+   {
+      animation-name:   bonusAnimatePlus;
+      animation-duration: @blockAnimationBonus;
+      animation-delay: @blockAnimationBonus * 2 - @blockAnimationBonus / 2;
+      animation-fill-mode: both;
+      @media screen and (max-width: 620px)
+      {
+         animation-delay: @blockAnimationBonus * 4 - @blockAnimationBonus / 2;
+      }
+   }
+@keyframes bonusAnimatePlus
+{
+    0% 
+    {
+      transform: rotate(0);
+      transform: translateX(-300%);
+    }
+
+    70%
+    {
+      transform: translateX(0);
+      transform: rotate(0);
+    }
+    100% 
+    {
+      transform: rotate(-@Andle);
+    }
+}
+
+@media screen and (max-width: 620px)
+{
+  @keyframes bonusAnimatePlus
+  {
+    0% 
+    {
+      transform: rotate(0);
+      transform: translateX(-300%);
+    }
+
+    50%
+    {
+      transform: translateX(0);
+      transform: rotate(0);
+    }
+    100% 
+    {
+      transform: rotate(-@Andle * 3 / 5);
+    }
+  }
+}
