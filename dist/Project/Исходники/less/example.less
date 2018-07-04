@@ -1,0 +1,457 @@
+@ProsentCircle: 100%;
+@CircleAnimationTime: 0.5s;
+.examples
+{
+
+  background: linear-gradient(to top, @HeaderColor + @Gradient,  @HeaderColor - @Gradient);
+  & h4
+  {
+  	color: white;
+    text-align: center;
+    font-size: 2.5em;
+    @media only screen and (max-width: 450px)
+    {
+        font-size: 1.9em; 
+    }
+     @media only screen and (max-width: 300px)
+    {
+        font-size: 1.5em; 
+    }
+  }
+
+  & .stack 
+  {
+  //  background-color: green;
+    display: grid;
+    grid-template-columns: 12% 35% 35%;
+    grid-template-rows: 55% 55%;
+    width: 100%;
+    margin: 0 0 10% 0;
+    grid-gap: 1em;
+
+
+
+    @media only screen and (max-width: 900px)
+    {
+      grid-template-columns: 0% 46% 46%;   
+    }
+
+    @media only screen and (max-width: 450px)
+    {
+      grid-template-columns: 100%; 
+      grid-template-rows: repeat(4, 25%);  
+    }
+
+
+    & h4
+    {
+      color: black;
+      text-align: center;
+      font-size: 1.3em;
+      
+    }
+    & p
+    {
+      font-size: 1.3em;
+      font-family: Georgia;
+      text-align: center;
+      @media only screen and (max-width: 700px)
+      {
+        font-size: 1em;
+      }
+
+      @media only screen and (max-width: 635px)
+      {
+
+        font-size: 1.23688em;
+      }
+      @media only screen and (max-width: 536px)
+      {
+
+        font-size: 1.04em;
+      }
+    }
+
+    }
+
+    & .OneExam, .TwoExam, .ThreeExam, .FourExam
+    {
+      background-color: white;
+      display: grid;
+      grid-template-rows: 20% 40%;
+      @media only screen and (max-width: 1150px)
+      {
+
+        grid-template-rows: 20% 55%;
+      }
+
+      @media only screen and (max-width: 635px)
+      {
+
+        grid-template-rows: 20% 60%;
+      }
+
+      justify-items: start;
+      align-items: start;
+      align-content: space-between;
+      grid-column: 2;
+      padding: 1%;
+      & .IconExam
+      {
+        width: 50%;
+      }
+    }
+
+  	& .contentSkill
+    {
+      width: 80%;
+      justify-self: center;
+      
+    }
+    
+    & .OneExam
+    {
+     justify-items: end;
+     border-radius: @ProsentCircle 0 20% 0;
+     @media only screen and (max-width: 550px)
+     {
+        border-radius: @ProsentCircle / 2 0 20% 0;
+     }
+     @media only screen and (max-width: 450px)
+      {
+        grid-column: 1;
+        border-radius: @ProsentCircle / 4;
+        justify-items: center;
+        & .contentSkill
+        {
+          width: 95%;
+        }
+      }
+      @media only screen and (max-width: 300px)
+      {
+        border-radius: 0;
+      }
+
+    }
+    & .TwoExam
+    {
+
+       border-radius: 0 @ProsentCircle  0 20%;
+      grid-column: 3;
+      @media only screen and (max-width: 550px)
+      {
+           border-radius: 0 @ProsentCircle / 2  0 20%;
+      }
+      @media only screen and (max-width: 450px)
+      {
+        border-radius: @ProsentCircle / 4;
+        grid-column: 1;
+        justify-items: center;
+        & .contentSkill
+        {
+          width: 95%;
+        }
+      }
+       @media only screen and (max-width: 300px)
+      {
+        border-radius: 0;
+      }
+    }
+    & .FourExam
+    {
+      grid-template-rows: 20% 60%;
+      border-radius: 20% 0 @ProsentCircle 0;
+      grid-column: 3;
+      @media only screen and (max-width: 450px)
+      {
+        animation-delay: @CircleAnimationTime * 4;
+      }
+      & .IconExam
+      {
+        order: 1;
+      }
+      @media screen and (max-width: 1103px)
+      {
+        grid-template-rows: 20% 48%;
+      }
+      @media screen and (max-width: 961px)
+      {
+        grid-template-rows: 20% 43%;
+      }
+      @media screen and (max-width: 930px)
+      {
+        grid-template-rows: 20% 49%;
+      }
+      @media screen and (max-width: 660px)
+      {
+        grid-template-rows: 20% 40%;
+      }
+      @media screen and (max-width: 551px)
+      {
+        grid-template-rows: 20% 33%;
+      }
+      @media only screen and (max-width: 550px)
+      {
+        border-radius: 20% 0 @ProsentCircle / 2 0;
+      }
+      @media only screen and (max-width: 450px)
+      {
+        border-radius: @ProsentCircle / 4;
+        grid-column: 1;
+        order: 0;
+        justify-items: center;
+        & .IconExam
+        {
+          order: -1;
+        }
+        & .contentSkill
+        {
+          width: 95%;
+        }
+      }
+       @media only screen and (max-width: 300px)
+      {
+        border-radius: 0;
+      }
+    }
+    & .ThreeExam
+    {
+      grid-template-rows: 20% 60%;
+      justify-items: end;
+      border-radius: 0 20% 0 @ProsentCircle;
+      @media only screen and (max-width: 450px)
+      {
+        animation-delay: @CircleAnimationTime * 3;
+      }
+      @media screen and (max-width: 1103px)
+      {
+        grid-template-rows: 20% 48%;
+      }
+      @media screen and (max-width: 961px)
+      {
+        grid-template-rows: 20% 43%;
+      }
+      @media screen and (max-width: 930px)
+      {
+        grid-template-rows: 20% 49%;
+      }
+      @media screen and (max-width: 660px)
+      {
+        grid-template-rows: 20% 40%;
+      }
+      @media screen and (max-width: 551px)
+      {
+        grid-template-rows: 20% 33%;
+      }
+      & .IconExam
+      {
+        order: 1;
+      }
+      @media only screen and (max-width: 550px)
+      {
+           border-radius: 0 20% 0 @ProsentCircle / 2;
+      }
+      @media only screen and (max-width: 450px)
+      {
+        border-radius: @ProsentCircle / 4;
+        grid-column: 1;
+         justify-items: center;
+        & .IconExam
+        {
+          order: -1;
+        }
+        & .contentSkill
+        {
+          width: 95%;
+        }
+      }
+       @media only screen and (max-width: 300px)
+      {
+        border-radius: 0;
+      }
+    } //.ThreeExam
+
+} //main
+
+/*
+.OneExamAnimate
+{
+  animation-name:  oneCircleAnimate;
+  animation-duration: @CircleAnimationTime;
+  animation-delay: @CircleAnimationTime;
+  animation-fill-mode: both;
+}
+
+.TwoExamAnimate
+{
+  animation-name:  twoCircleAnimate;
+  animation-duration: @CircleAnimationTime;
+  animation-delay: @CircleAnimationTime * 2;
+  animation-fill-mode: both;
+}
+
+.ThreeExamAnimate
+{
+  animation-name:  threeCircleAnimate;
+  animation-duration: @CircleAnimationTime;
+  animation-delay: @CircleAnimationTime * 4;
+  animation-fill-mode: both;
+}
+
+.FourExamAnimate
+{
+  animation-name:  fourCircleAnimate;
+  animation-duration: @CircleAnimationTime;
+  animation-delay: @CircleAnimationTime * 3;
+  animation-fill-mode: both;
+}
+*//*
+@keyframes oneCircleAnimate
+{
+    0% 
+    {
+       border-radius: 0 0 20% 0;
+    }
+    100% 
+    {
+      border-radius: @ProsentCircle 0 20% 0;
+    }
+}
+
+@keyframes twoCircleAnimate
+{
+    0% 
+    {
+       border-radius:  0  0 0 20%;
+    }
+    100% 
+    {
+      border-radius: 0 @ProsentCircle  0 20%;
+    }
+}
+
+@keyframes threeCircleAnimate
+{
+    0% 
+    {
+       border-radius:  0 20% 0 0;
+    }
+    100% 
+    {
+      border-radius: 0 20% 0 @ProsentCircle;
+    }
+}
+
+@keyframes fourCircleAnimate
+{
+    0% 
+    {
+       border-radius: 20% 0 0 0;
+    }
+    100% 
+    {
+       border-radius: 20% 0 @ProsentCircle 0;
+    }
+}
+
+@media only screen and (max-width: 550px)
+{
+   @keyframes oneCircleAnimate
+   {
+      0% 
+      {
+         border-radius: 0 0 20% 0;
+      }
+      100% 
+      {
+        border-radius: @ProsentCircle / 2 0 20% 0;
+      }
+   }
+
+  @keyframes twoCircleAnimate
+  {
+      0% 
+      {
+         border-radius:  0  0 0 20%;
+      }
+      100% 
+      {
+        border-radius: 0 @ProsentCircle / 2  0 20%;
+      }
+  }
+
+  @keyframes threeCircleAnimate
+  {
+      0% 
+      {
+         border-radius:  0 20% 0 0;
+      }
+      100% 
+      {
+        border-radius: 0 20% 0 @ProsentCircle / 2;
+      }
+  }
+
+  @keyframes fourCircleAnimate
+  {
+      0% 
+      {
+         border-radius: 20% 0 0 0;
+      }
+      100% 
+      {
+         border-radius: 20% 0 @ProsentCircle / 2 0;
+      }
+  }       
+}
+
+@media only screen and (max-width: 450px)
+{
+   @keyframes oneCircleAnimate
+   {
+      0% 
+      {
+         border-radius: 0 ;
+      }
+      100% 
+      {
+        border-radius: @ProsentCircle / 4;
+      }
+   }
+
+  @keyframes twoCircleAnimate
+  {
+      0% 
+      {
+         border-radius:  0 ;
+      }
+      100% 
+      {
+        border-radius: @ProsentCircle / 4;
+      }
+  }
+
+  @keyframes threeCircleAnimate
+  {
+      0% 
+      {
+         border-radius:  0;
+      }
+      100% 
+      {
+        border-radius: @ProsentCircle / 4;
+      }
+  }
+
+  @keyframes fourCircleAnimate
+  {
+      0% 
+      {
+         border-radius:  0;
+      }
+      100% 
+      {
+         border-radius: @ProsentCircle / 4;
+      }
+  }       
+}*/

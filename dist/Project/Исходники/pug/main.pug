@@ -1,0 +1,21 @@
+.main.Block
+	.mainFoto.mainAnimateFoto
+		img(src = './img/Photo2.jpg')
+	.description.mainAnimateDes
+		div
+			h2 Сивков Сергей
+		div
+			h3 Фрилансер Программист Верстальщик
+		div
+			p
+				| Создаю сайты под ключ: визитки, landing page, интернет магазины. 
+				<br>
+				| Использую современные средства разработки, которые позволяют создавать сайты максимально 
+				| быстро и качественно. Делаю кросбраузерные и адаптивные сайты, которые будут одинакого хороши на 
+				| любых устройствах. Выполняю работы по адекватной цене.
+	.application.mainAnimateApp
+		p Сообщение
+		form(method = 'post' action = 'Post.php' name = 'post')
+			input(type = 'text' placeholder = 'Имя'  name = 'UserName')
+			input(type = 'email' placeholder = 'Email'  name = 'UserMail') 
+			input(type = 'submit' value = 'Отправить' name = 'post')

@@ -1,0 +1,45 @@
+header
+{
+  background: linear-gradient(to top, @HeaderColor + @Gradient,  @HeaderColor - @Gradient);
+  padding: 0%;
+  transform: translateY(-100%);
+   box-shadow:
+    0 6px #111111,
+    0 3px 15px rgba(0,0,0,.4),
+    inset 0 1px rgba(255,255,255,.3),
+    inset 0 0 3px rgba(255,255,255,.5);
+  & h1
+  {
+  	color: white;
+  	text-align: center;
+    text-shadow: 1px 1px 1px white;
+    font-size: 2em;
+    @media only screen and (max-width: 600px)
+    {
+      font-size: 1.9em;
+    }
+    @media only screen and (max-width: 450px)
+    {
+      font-size: 1.5em;
+    }
+  }  
+}
+
+.headerAnimate
+{
+  animation-name: capAnimation;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+@keyframes capAnimation 
+{
+    0% 
+    {
+      transform: translateY(-100%);
+    }
+    100% 
+    {
+      transform: translateY(0);
+    }
+}
+

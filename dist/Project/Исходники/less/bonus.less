@@ -1,0 +1,276 @@
+@Andle: 20deg;
+@blockAnimationBonus: 1s;
+.bonus
+{
+  background-color: white;
+  padding: 0 0 7%;
+  @media only screen and (max-width: 450px)
+  {
+       // flex-direction: column;
+       padding: 0 0 30%;
+  }
+  & h3
+  {
+    text-align: center;
+    margin: 2% 0 ;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 3px black;
+    @media only screen and (max-width: 950px)
+    {
+      font-size: 2em;
+    }
+    @media only screen and (max-width: 712px)
+    {
+      font-size: 1.5em;
+    }
+    @media only screen and (max-width: 450px)
+    {
+         font-size: 1.2em;
+         margin: 10% 0;
+    }
+  }
+
+  
+  & .stack 
+  {
+    //background-color: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+  	margin: 9% 0;
+  	width: 100%;
+    @media only screen and (max-width: 620px)
+    {
+      flex-direction: column;
+      align-items: center;
+      transform: translateY(1%);
+    }
+
+    & .leftBonus, .reightBonus
+    {
+      //background-color: red;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+      width: 40%;
+      @media only screen and (max-width: 712px)
+      {
+         width: 46%;
+      }
+      
+       @media only screen and (max-width: 620px)
+      {
+         width: 90%;
+         align-items: flex-start;
+
+      }
+
+    }
+
+   
+
+    & .OneBonus, .ThreeBonus, .TwoBonus, .FourBonus
+    {
+      background: linear-gradient(to top, @HeaderColor + @Gradient,  @HeaderColor - @Gradient);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-end;
+      //transform: translateX(-300%);
+      transform: rotate(-@Andle);
+      padding: 2% 0% 0;
+      height: 35%;
+      @media only screen and (max-width: 950px)
+      {
+        height: 44%;
+      }
+
+    
+      @media only screen and (max-width: 620px)
+      {
+        transform: rotate(-@Andle * 3 / 5);
+        align-items: flex-start;
+      }
+      @media only screen and (max-width: 280px)
+      {
+
+        transform: rotate(0);
+        align-items: center;
+        flex-direction: column;
+      }
+
+      width: 100%;
+     // box-shadow: 0px 0px 10px 5px #000000;
+    }
+  
+
+    &  .TwoBonus, .FourBonus, .ThreeBonus
+    {
+      @media only screen and (max-width: 620px)
+      {
+         margin: 9% 0 0;
+      }
+    }
+    
+
+    & .TwoBonus, .FourBonus
+    {
+      flex-direction: row-reverse;
+      @media only screen and (max-width: 280px)
+      {
+        flex-direction: column;
+      }
+
+    }
+
+    & .IconBonus
+    {
+       width: 30%;
+       flex-shrink: 0;
+       align-self: flex-start;
+       @media only screen and (max-width: 620px)
+       {
+          width: 25%;
+       }
+        @media only screen and (max-width: 280px)
+        {
+          align-self: center;
+          width: 50%;
+        }
+    }
+    & .contentSkill
+    {
+        width: 70%;
+        align-self: center;
+        @media only screen and (max-width: 280px)
+        {
+  
+          width: 100%;
+        }
+    }
+    & h4, p
+    {
+      color: white;
+      margin: 2%;
+      font-size: 1.3em;
+      text-align: center;
+      @media only screen and (max-width: 1100px)
+      {
+        font-size: 1.1em;
+      }
+      /*@media only screen and (max-width: 800px)
+      {
+        font-size: 0.9em;
+      }*/
+      @media only screen and (max-width: 620px)
+      {
+        font-size: 1.2em;
+
+      }
+      @media only screen and (max-width: 450px)
+      {
+        font-size: 1em;
+      }
+      @media only screen and (max-width: 359px)
+      {
+        font-size: 0.8em;
+      }
+      @media only screen and (max-width: 280px)
+      {
+        font-size: 1.2em;
+      }
+    }
+  }
+   
+}
+
+
+.OneBonusAnimate
+   {   
+      animation-name:   bonusAnimatePlus;
+      animation-duration: @blockAnimationBonus;
+      animation-delay: @blockAnimationBonus * 3 - @blockAnimationBonus / 2;
+      animation-fill-mode: both;
+      @media screen and (max-width: 620px)
+      {
+         animation-delay: @blockAnimationBonus / 2;
+      }
+   }
+
+   .ThreeBonusAnimate
+   {
+      animation-name:  bonusAnimatePlus;
+      animation-duration: @blockAnimationBonus;
+      animation-delay: @blockAnimationBonus / 2;
+      animation-fill-mode: both;
+      @media screen and (max-width: 620px)
+      {
+         animation-delay: @blockAnimationBonus * 3 - @blockAnimationBonus / 2;
+      }
+   }
+
+   .TwoBonusAnimate
+   {
+      animation-name: bonusAnimatePlus;
+      animation-duration: @blockAnimationBonus;
+      animation-delay: @blockAnimationBonus * 4 - @blockAnimationBonus / 2;
+      animation-fill-mode: both;
+      @media screen and (max-width: 620px)
+      {
+         animation-delay: @blockAnimationBonus * 2 - @blockAnimationBonus / 2;
+      }
+   }
+
+   .FourBonusAnimate
+   {
+      animation-name:   bonusAnimatePlus;
+      animation-duration: @blockAnimationBonus;
+      animation-delay: @blockAnimationBonus * 2 - @blockAnimationBonus / 2;
+      animation-fill-mode: both;
+      @media screen and (max-width: 620px)
+      {
+         animation-delay: @blockAnimationBonus * 4 - @blockAnimationBonus / 2;
+      }
+   }
+@keyframes bonusAnimatePlus
+{
+    0% 
+    {
+      transform: rotate(0);
+      transform: translateX(-300%);
+    }
+
+    70%
+    {
+      transform: translateX(0);
+      transform: rotate(0);
+    }
+    100% 
+    {
+      transform: rotate(-@Andle);
+    }
+}
+
+@media screen and (max-width: 620px)
+{
+  @keyframes bonusAnimatePlus
+  {
+    0% 
+    {
+      transform: rotate(0);
+      transform: translateX(-300%);
+    }
+
+    50%
+    {
+      transform: translateX(0);
+      transform: rotate(0);
+    }
+    100% 
+    {
+      transform: rotate(-@Andle * 3 / 5);
+    }
+  }
+}

@@ -1,0 +1,313 @@
+@SizeIcon: 40%;
+@skillWidth: 90%;
+
+
+@blockAnimationSkill: 0.5s;
+
+.jsjq0{fill:#6B103C;}
+.jsjq1{fill:#6A0F3D;}
+.jsjq2{fill:#6A0F3D;stroke:#FF3D62;stroke-width:9;stroke-miterlimit:10;}
+.jsjq3{fill:#FF3D62;}
+.jsjq4{fill:#FEFEFE;}
+.jsjq5{fill:#EA3963;}
+.jsjq6{fill:#FFFFFF;}
+.jsjq7{fill:#B15F5B;}
+.jsjq8{fill:#BE7A6A;}
+.jsjq9{fill:#BE7A6A;stroke:#FFEA1A;stroke-width:4;stroke-miterlimit:4;}
+.jsjq10{fill:#FFEA1A;} 
+.jsjq11{fill:#FFDA00;}
+
+
+
+
+.skills
+{
+  background: linear-gradient(to top, @HeaderColor + @Gradient,  @HeaderColor - @Gradient);
+
+  & h3
+  {
+
+    color:  white;
+    text-align: center;
+    font-size: 3em;
+    margin: 2%;
+    text-shadow: 1px 1px 2px white;
+    @media only screen and (max-width: 762px)
+    {
+      font-size: 2.5em;
+    }
+    @media only screen and (max-width: 450px)
+    {
+      font-size: 1.7em;
+    }
+    @media only screen and (max-width: 200px)
+    {
+      font-size: 1.2em;
+    }
+  }
+  & h4, p
+  {
+    text-align: center;
+    font-size: 1.31em;
+    margin: 1% 0;
+    @media only screen and (max-width: 900px)
+    {
+      font-size: 1.1em;
+    }
+  }
+  & h4
+  {
+    margin: 2% 0;
+
+  }
+  
+  & .stack 
+  {
+  	
+    display: grid;
+
+    grid-template-columns: 24% 48% 24%;
+    grid-template-rows: 37% 37%;
+    align-items: stretch;
+  	margin: 5% 0% 10% (100 - @skillWidth) / 2;
+  	width: @skillWidth;
+
+  	& .skill
+  	{
+       background-color: white;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+  	   padding: 0% 1% 1% 1%;
+       & .IconSkill
+       {
+       
+          flex-shrink: 0;
+          width: @SizeIcon * 2;
+       }
+  	}
+    
+    & #skillOne
+    {
+      grid-column: 1;
+      grid-row: 1 / span 3;
+      flex-direction: column;
+      justify-content: space-around;
+      margin: 0 4% 0 0;
+    }
+
+    & #skillTwo
+    {
+
+
+      grid-column: 2;
+      grid-row: 1;
+      flex-direction: row;
+      & .contentSkill
+      {
+        padding: 0 3% 0 0 ;
+      }
+      margin: 0 0 3% 0;
+    }
+
+    & #skillThree
+    {
+      grid-column: 2;
+      grid-row: 2;
+      flex-direction: row-reverse;
+
+    }
+
+    & #skillFour 
+    {
+
+      grid-column: 3;
+      grid-row: 1 / span 3;
+      flex-direction: column-reverse;
+      justify-content: space-around;
+      margin: 0 0  0 8%;
+    }
+
+    & #skillTwo, #skillThree 
+    {
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+       & .IconSkill
+      {
+        width: @SizeIcon;
+      }
+    }
+
+    @media only screen and (max-width: 762px)
+    {
+        /*
+        justify-content: space-between;
+        align-items: flex-start; */
+        grid-template-rows: 24% 48% 24%;
+        grid-template-columns: 49% 49%;
+
+          & #skillTwo, #skillThree
+          {
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            height: auto;
+            margin: 3% 0 ;
+            & .IconSkill
+            {
+               width: @SizeIcon / 2;
+            }
+            & .contentSkill
+            {
+
+              padding: 1%;
+            }
+          }
+
+          & #skillTwo 
+          {
+              grid-column: 1 / span 3;
+              grid-row: 1;
+
+          }
+
+          & #skillThree
+          {
+              grid-column: 1 / span 3;
+              grid-row: 3;
+          }
+         & #skillOne, #skillFour
+         {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            & .IconSkill
+            {
+              width: @SizeIcon ;
+            }
+            & .contentSkill
+            {
+              padding: 1%;
+            }
+          }
+          & #skillOne
+          {
+              grid-column: 1;
+              grid-row: 2;
+              
+          }
+          & #skillFour
+          {
+              grid-column: 2;
+              grid-row: 2;
+              margin:  0   0 0 4%;
+          }
+
+    }
+    
+    @media only screen and (max-width: 500px)
+    { 
+      width: 96%;
+      margin: 8% 2%;
+    }
+
+    @media only screen and (max-width: 450px)
+    { 
+      grid-template-columns: 99%;
+      grid-template-rows: repeat(4, 24%);
+      grid-gap: 10px;
+      & #skillOne
+      {
+        justify-content: flex-start; 
+        grid-column: 1;
+        grid-row: 1; 
+        margin: 0;
+        
+      }
+      & #skillTwo
+      {
+        flex-direction: column; 
+        grid-column: 1;
+        grid-row: 4;  
+        margin: 0; 
+        & .IconSkill
+        {
+          width: 50%;
+        }  
+        
+      }
+      & #skillThree
+      {
+
+        grid-column: 1;
+        grid-row: 3;
+        margin: 0;
+        flex-direction: column; 
+        & .IconSkill
+        {
+          width: 50%;
+        }
+      }
+      & #skillFour
+      {
+        flex-direction: column; 
+        justify-content: flex-start;
+        grid-column: 1;
+        grid-row: 2;
+        margin: 0;
+       
+      }
+
+
+    }
+  }// Stack
+  
+  
+} //Skills
+
+ 
+.skillOneAnimate
+{
+  animation-name:  ProbAnimate;
+  animation-duration: @blockAnimationSkill;
+  animation-delay: @blockAnimationSkill;
+  animation-fill-mode: both;
+}
+
+.skillTwoAnimate
+{
+  animation-name:  ProbAnimate;
+  animation-duration: @blockAnimationSkill;
+  animation-delay: @blockAnimationSkill * 4;
+  animation-fill-mode: both;
+}
+
+.skillThreeAnimate
+{
+  animation-name:  ProbAnimate;
+  animation-duration: @blockAnimationSkill;
+  animation-delay: @blockAnimationSkill * 3;
+  animation-fill-mode: both;
+}
+
+.skillFourAnimate
+{
+  animation-name:  ProbAnimate;
+  animation-duration: @blockAnimationSkill;
+  animation-delay: @blockAnimationSkill * 2;
+  animation-fill-mode: both;
+}
+
+
+@keyframes ProbAnimate
+{
+    0% 
+    {
+      background-color: black;
+    }
+    100% 
+    {
+      background-color: white;
+    }
+}

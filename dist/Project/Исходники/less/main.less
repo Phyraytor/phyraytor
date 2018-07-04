@@ -1,0 +1,202 @@
+@capAnimationTime: 1.1s;
+@fotoMainAnimationTime: 0.65s;
+@desMainAnimationTime: 0.5s;
+@appMainAnimationTime: 0.75s;
+
+
+.main
+{
+  display: grid;
+  grid-template-columns: 24% 40% 23%;
+  justify-content: space-around;
+  align-items: center;
+  justify-items: center;
+  @media only screen and (max-width: 900px)
+  {
+    grid-template-columns: 41% 41%;
+    grid-template-row: 50% 50%;
+    grid-row-gap: 3em;
+  }
+  
+  @media only screen and (max-width: 450px)
+  {
+    grid-template-columns: 2% 90% 4%;
+    grid-template-row: 30% 40% 30%;
+    grid-row-gap: 3em;
+  }
+
+  padding: 10% 0;
+
+    & .mainFoto
+    {
+      transform: scale(0, 0);
+      & img
+      {
+        float: left;
+        border-radius: 90%;
+        max-width: 100%;
+        box-shadow: 0px 0px 4px 1px black; 
+        @media only screen and (max-width: 450px)
+        {
+          max-width: 90%;
+        }
+      }
+      @media only screen and (max-width: 450px)
+      {
+        margin: 0 0 0 10%;
+        grid-column: 2;
+      }
+    }
+    
+    & .description
+    {
+      
+      grid-column: 2;
+      background-color: white;
+      box-shadow: 10px 0px 6px 2px black;
+
+      transform: scaleY(0);
+      @media only screen and (max-width: 900px)
+      {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 2;
+      }
+      @media only screen and (max-width: 450px)
+      {
+        grid-column: 2;
+      }
+    	& div
+    	{
+        display: inline-block;
+        background: linear-gradient(to top, @HeaderColor + @Gradient,  @HeaderColor - @Gradient);
+    	  padding: 1% 2%;
+        width: 100%;
+        & h3, h2
+        {
+          font-family: sans-serif;
+        }
+        & p
+        {
+          font-size: 1.1em;
+          font-family: Georgia;
+          font-style: italic;
+        }
+        & p, h3, h2
+        {
+          margin: 0.4% 0;
+          color: white;
+          @media only screen and (max-width: 1103px)
+          {
+            font-size: 0.999em;
+          }
+        }
+    	}
+  }
+
+  & .application
+  {
+    background: linear-gradient(to top, @HeaderColor + @Gradient - #030303,  @HeaderColor - @Gradient);
+    box-shadow: 0px 0px 4px 2px black;
+    border-radius: 5%;
+    width: 100%;
+    grid-column: 3;
+    transform: scaleX(0);
+
+
+    @media only screen and (max-width: 900px)
+    {
+      grid-column: 2;
+    }
+    @media only screen and (max-width: 450px)
+    { 
+      grid-column: 2;
+      grid-row: 3;  
+    }
+    
+    & p
+    { 
+      font-size: 1.6em;
+      font-family: Georgia;
+      font-style: italic;
+      text-align: center;
+      color: white;
+      margin: 5%;
+    }
+    & input[type=text], input[type=email], input[type=submit]
+    {
+      display: flex;
+      width: 70%;
+      margin: 10% 0 5% 11%; 
+      padding: 3%;
+      font-size: 1em;
+      border-radius: 3%;
+    }
+    & input[type=submit]
+    {
+      width: 77%;
+      padding: 4%;
+    }
+  }// aplication
+}//main
+
+
+ .mainAnimateFoto
+ {
+    animation-name: fotoMainAnimation;
+    animation-duration: @fotoMainAnimationTime;
+    animation-delay: @capAnimationTime;
+    animation-fill-mode: both;
+ } 
+
+ .mainAnimateDes
+ {
+    animation-name: desMainAnimation;
+    animation-duration: @desMainAnimationTime;
+    animation-delay: @capAnimationTime + @fotoMainAnimationTime;
+    animation-fill-mode: both;
+ }
+
+ .mainAnimateApp
+ {
+    animation-name: appMainAnimation;
+    animation-duration: @appMainAnimationTime;
+    animation-delay: @capAnimationTime + @fotoMainAnimationTime + @desMainAnimationTime;
+    animation-fill-mode: both;
+ }
+
+@keyframes fotoMainAnimation 
+{
+    0% 
+    {
+      transform: scale(0, 0);
+    }
+    100% 
+    {
+      transform: scale(1, 1);
+    }
+}
+
+@keyframes desMainAnimation 
+{
+    0% 
+    {
+      transform: scaleY(0);
+    }
+    100% 
+    {
+      transform: scaleY(1);
+    }
+}
+
+@keyframes appMainAnimation 
+{
+    0% 
+    {
+      transform: scaleX(0);
+    }
+    100% 
+    {
+      transform: scaleX(1);
+    }
+}
